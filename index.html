@@ -9,25 +9,29 @@
 	</head>
 
 	<body>
-		<h1 class='project_title'>Wavelet Flow: Fast Training of High Resolution Normalizing Flows</h1>
-		<div class='project_date'>Sept. 25, 2020</div>
+		<h1 class='project_title'>Noise2NoiseFlow: Realistic Camera Noise Modeling without Clean Images</h1>
+		<div class='project_date'>April 25, 2022</div>
 		<img src='img/project_graphic.svg'>
 
 		<h2 class='project_section'>Abstract</h2>
-		Normalizing flows are a class of probabilistic generative models which allow for both fast density computation and efficient sampling and are effective at modelling complex distributions like images.  A drawback among current methods is their significant training cost, sometimes requiring months of GPU training time toachieve state-of-the-art results. This paper introduces <i>Wavelet Flow</i>, a multi-scale, normalizing flow architecture based on wavelets. A Wavelet Flow has an explicit representation of signal scale that inherently includes models of lower resolution signals and conditional generation of higher resolution signals, <i>i.e.</i>, super resolution. A major advantage of Wavelet Flow is the ability to construct generative models for high resolution data (<i>e.g.</i>, 1024×1024 images) that are impractical with previous models.  Furthermore, Wavelet Flow is competitive with previous normalizing flows in terms of bits per dimension on standard (low resolution) benchmarks while being up to 15× faster to train.
+		Image noise modeling is a long-standing problem with many applications in computer vision. Early attempts that propose simple models, such as signal-independent additive white Gaussian noise or the heteroscedastic Gaussian noise model (a.k.a., camera noise level function) are not sufficient to learn the complex behavior of the camera sensor noise. Recently, more complex learning-based models have been proposed that yield better results in noise synthesis and downstream tasks, such as denoising. However, their dependence on supervised data (i.e., paired clean images) is a limiting factor given the challenges in producing ground-truth images. This paper proposes a framework for training a noise model and a denoiser simultaneously while relying only on pairs of noisy images rather than noisy/clean paired image data. We apply this framework to the training of the Noise Flow architecture. The noise synthesis and density estimation results show that our framework outperforms previous signal-processing-based noise models and is on par with its supervised counterpart. The trained denoiser is also shown to significantly improve upon both supervised and weakly supervised baseline denoising approaches. The results indicate that the joint training of a denoiser and a noise model yields significant improvements in the denoiser.
 
 		<h2 class='project_section'>Authors</h2>
 		<div class='project_author_wrapper'>
 			<a class='project_author' href='https://jasonjyu.com/'>
-				<img class='author_icon' src='img/jason_j_yu.png'>
-				<p>Jason J. Yu</p>
+				<img class='author_icon' src='img/ali.jpg'>
+				<p>Ali Maleky</p>
 			</a>
 			<a class='project_author' href='https://scs.ryerson.ca/~kosta/'>
-				<img class='author_icon' src='img/kosta.jpg'>
-				<p>Konstantinos G. Derpanis</p>
+				<img class='author_icon' src='img/shayan.png'>
+				<p>Shayan Kousha</p>
+			</a>
+			<a class='project_author' href='http://www.cse.yorku.ca/~mbrown/'>
+				<img class='author_icon' src='img/michael.jpg'>
+				<p>Michael S. Brown</p>
 			</a>
 			<a class='project_author' href='https://mbrubake.github.io/'>
-				<img class='author_icon' src='img/marcus_brubaker.png'>
+				<img class='author_icon' src='img/marcus.png'>
 				<p>Marcus A. Brubaker</p>
 			</a>
 		</div>
@@ -49,24 +53,26 @@
 			</a>
 			-->
 			<a class='project_material' href='https://github.com/YorkUCVIL/Wavelet-Flow/'>
-				<img style='margin: 14.6% 0;' src='icons/github.svg'>
+				<img style='margin: 14.6% 0;' src='icons/Octocat.png'>
 				<p>Code</p>
 			</a>
 		</div>
 
 		<h2 class='project_section'>Citation</h2>
 		<div class="cite_bib">
-			@inproceedings{jjyu2020waveletflow,<br>
-				&ensp;&ensp;&ensp; author = {Jason J. Yu and Konstantinos G. Derpanis and Marcus A. Brubaker},<br>
-				&ensp;&ensp;&ensp; title = {{Wavelet Flow}: Fast Training of High Resolution Normalizing Flows},<br>
-				&ensp;&ensp;&ensp; booktitle = {NeurIPS},<br>
-				&ensp;&ensp;&ensp; year = {2020}<br>
+			@inproceedings{maleky2022noise,<br>
+				&ensp;&ensp;&ensp; title={{Noise2NoiseFlow: Realistic Camera Noise Modeling without Clean Images}},<br>
+				&ensp;&ensp;&ensp; author={Maleky, Ali and Kousha, Shayan and Brown, Michael S. and Brubaker, Marcus A.},<br>
+				&ensp;&ensp;&ensp; booktitle={CVPR},<br>
+				&ensp;&ensp;&ensp; year = {2022}<br>
 			}
 		</div>
 
 
-		<h2 class='project_section'>Misc</h2>
+		<!--
+			<h2 class='project_section'>Misc</h2>
 		<a href='appendix'>PNG images from appendix</a>
+		-->
 		<!-- <a href=''>Slides for presentation at ECCV 2020 <i>Normalizing Flows and Invertible Neural Networks in Computer Vision</i> tutorial</a> -->
 
 	</body>
