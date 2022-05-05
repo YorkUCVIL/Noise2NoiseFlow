@@ -4,7 +4,7 @@
 }
 
 body{
-	font-family: Avenir, "Avenir_backup";
+	font-family: 'helvetica', sans-serif, Avenir, "Avenir_backup";
 	font-size: 16px;
 	max-width: 60em;
 	margin:auto;
@@ -13,6 +13,16 @@ body{
 
 img{
 	width:100%;
+}
+
+h1 {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+h2 {
+    font-weight: normal;
+    color: #555555;
 }
 
 a {
@@ -25,7 +35,8 @@ a:hover{
 }
 
 .project_title{
-	font-size:42px;
+    text-align: center;
+	font-size:36px;
 	line-height: 1;
 	margin-bottom: 0.15em;
 }
@@ -83,7 +94,7 @@ a:hover{
 
 .project_author{
 	display:block;
-	width:33.3%;
+	width:25%;
 	float:left;
 	text-align: center;
 }
